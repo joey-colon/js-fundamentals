@@ -70,7 +70,7 @@ class Deque {
 
     const deletedNode = this.head;
     this.head = this.head.next;
-
+    this.size -= 1;
     return deletedNode.data;
   }
 
