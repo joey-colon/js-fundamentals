@@ -52,12 +52,10 @@ class Deque {
 
     if (!this.head) {
       this.head = this.tail = new Node(val);
-      this.head.prev = this.tail;
       this.tail.prev = this.head;
     } else {
       const newHead = new Node(val, this.head, this.head.prev);
       this.head = newHead;
-      this.tail.prev = this.head;
     }
 
     this.size += 1;
